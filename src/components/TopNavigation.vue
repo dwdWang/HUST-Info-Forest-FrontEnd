@@ -35,6 +35,7 @@ const routes = [
   padding: 15px;
   background-color:rgb(255, 255, 255);
   z-index: 100;
+  border-bottom: 1px solid #ccc;
 }
 
 .nav-link {
@@ -54,6 +55,6 @@ const routes = [
 }
 
 .nav-link.active:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
 }
 </style>

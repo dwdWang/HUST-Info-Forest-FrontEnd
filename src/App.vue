@@ -7,13 +7,15 @@ import TopNavigation from './components/TopNavigation.vue'
 <template>
   <div id="app">
     <TopNavigation />
-    <router-view />
+    <div class="main-content">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  line-height: 1;
 }
 
 .logo {
