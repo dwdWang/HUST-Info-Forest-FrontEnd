@@ -57,4 +57,19 @@ const routes = [
 .nav-link.active:hover {
   background-color: #007bff;
 }
+
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  .top-navigation {
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}
+
 </style>
