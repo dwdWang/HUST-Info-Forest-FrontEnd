@@ -1,7 +1,6 @@
 <template>
   <div class="chat-page">
-    <h1>聊天对谈</h1>
-    <p class="page-id">这里是聊天页面</p>
+    <div class="message">该功能暂未开放，请您等等</div>
   </div>
 </template>
 
@@ -10,11 +9,14 @@
 
 <style scoped>
 .chat-page {
-  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.page-id {
+.message {
+  font-size: 1.2em;
   color: #666;
-  margin-top: 10px;
 }
 </style>

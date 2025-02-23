@@ -77,7 +77,7 @@ const results: SearchResult[] = [
 .result-page {
   padding: 20px;
   max-width: 800px;
-  margin: 70px auto 0;
+  margin: 0px auto 0;
 }
 
 .result-count {

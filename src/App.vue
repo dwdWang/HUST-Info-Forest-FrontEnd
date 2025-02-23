@@ -5,13 +5,23 @@ import TopNavigation from './components/TopNavigation.vue'
 </script>
 
 <template>
-  <div id="app">
+  <div class="app">
     <TopNavigation />
     <div class="main-content">
       <router-view />
     </div>
   </div>
 </template>
+
+<style>
+/* 添加全局样式重置 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+</style>
 
 <style scoped>
 header {
@@ -42,11 +52,17 @@ header {
 }
 
 .app {
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .main-content {
-  padding-top: 60px; /* Reduced from 70px */
-  margin-top: 0px;  /* Removed redundant margin */
+  margin-top: 60px;  /* 改用 margin-top 代替 padding-top，这样页面高度就和窗口一致了 */
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 </style>

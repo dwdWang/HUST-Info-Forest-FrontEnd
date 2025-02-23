@@ -1,7 +1,6 @@
 <template>
   <div class="info-stream-page">
     <div class="stream-container">
-      <h2 class="stream-title">最新资讯</h2>
       <div class="stream-list">
         <div v-for="item in infoStream" 
              :key="item.id" 
@@ -81,7 +80,7 @@ const infoStream: InfoItem[] = [
 
 <style scoped>
 .info-stream-page {
-  padding: 20px;
+  padding: 30px 20px 20px;
   max-width: 800px;
   margin: 0 auto;  /* 只保留左右边距的自动居中 */
 }

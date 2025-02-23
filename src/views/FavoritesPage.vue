@@ -7,13 +7,13 @@
       </button>
     </div>
     <div class="content-container">
+      <svg ref="svgRef" class="mindmap-container"></svg>
       <textarea 
         v-if="isEditing" 
         v-model="markdownContent" 
         class="markdown-editor"
         placeholder="输入Markdown格式的思维导图内容..."
-      />
-      <svg ref="svgRef" class="mindmap-container" />
+      ></textarea>
     </div>
   </div>
 </template>
@@ -60,9 +60,6 @@ const updateMindmap = async () => {
 
 const toggleEditMode = () => {
   isEditing.value = !isEditing.value;
-  if (!isEditing.value) {
-    updateMindmap();
-  }
 };
 
 onMounted(() => {
@@ -73,10 +70,8 @@ onMounted(() => {
 });
 
 watch(markdownContent, () => {
-  if (!isEditing.value) {
-    updateMindmap();
-  }
-});
+  updateMindmap();
+}, { immediate: true });
 </script>
 
 <style scoped>
@@ -112,10 +107,13 @@ watch(markdownContent, () => {
   flex: 1;
   position: relative;
   min-height: 0;
+  overflow: hidden;
 }
 
 .markdown-editor {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 16px;
@@ -123,11 +121,21 @@ watch(markdownContent, () => {
   border-radius: 4px;
   font-family: monospace;
   resize: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0px);
+  z-index: 1;
 }
 
 .mindmap-container {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 0;
+}
+
+.markdown-editor:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
 }
 </style>
