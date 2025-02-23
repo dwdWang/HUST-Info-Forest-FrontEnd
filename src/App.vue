@@ -46,7 +46,7 @@ header {
 }
 
 .main-content {
-  padding-top: 70px; /* 为固定定位的导航栏留出空间 */
-  margin-top: 70px;
+  padding-top: 60px; /* Reduced from 70px */
+  margin-top: 0px;  /* Removed redundant margin */
 }
 </style>
