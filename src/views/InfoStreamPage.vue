@@ -1,6 +1,6 @@
 <template>
   <div class="info-stream-page">
-    <h1>信息交流</h1>
+    <h1>信息分享</h1>
     <p class="page-id">这里是信息流页面</p>
   </div>
 </template>
