@@ -1,7 +1,7 @@
 <template>
   <div class="search-page">
     <div class="logo-container">
-      <img src="/src/assets/logo.svg" alt="社团Logo" class="logo"/>
+      <img src="/src/assets/hustxiaohui.jpg" alt="社团Logo" class="logo"/>
     </div>
     <div class="search-box">
       <span class="icon">
@@ -106,7 +106,7 @@ const handleSuggestionClick = (query: string) => {
 }
 
 .logo {
-  height: 100px;  /* 调整这个值来改变logo大小 */
+  height: 150px;  /* 调整这个值来改变logo大小 */
   width: auto;    /* 保持图片比例 */
 }
 
@@ -148,7 +148,7 @@ const handleSuggestionClick = (query: string) => {
   }
 
   .logo {
-    height: 80px;  /* 在小屏幕上稍微缩小logo */
+    height: 100px;  /* 在小屏幕上稍微缩小logo */
   }
 
   .search-suggestions {
